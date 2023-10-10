@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <iomanip>
 #include <math.h>
 using namespace std;
@@ -62,16 +62,16 @@ int main() {
 	cin >> h;
 	cout << endl;
 
-	cout << "======================================" << endl; //верхняя часть таблицы
-	cout << "|  x  |    sin(x)    ||   sinys(x)   |" << endl;
-	cout << "======================================" << endl;
+	cout << "======================================================" << endl; //верхняя часть таблицы
+	cout << "|  x  |     Y(x)     ||     S(x)     |   Y(x)-S(x)   |" << endl;
+	cout << "======================================================" << endl;
 
 	for (double x = a; x <= b; x = x + h) {
 		S = MainFunc(x);
 		Y = sin(x);
 		cout << "|" << setw(5) << x << "|" << setw(14) << Y << "||" << setw(14) << S << "|" << setw(15) << fabs(sin(x) - S) << "|" << endl;
 	}
-	cout << "======================================" << endl;
+	cout << "======================================================" << endl;
 	
 	system("pause");
 	return 0;
